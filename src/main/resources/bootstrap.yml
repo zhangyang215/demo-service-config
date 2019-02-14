@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: service-config
+  profiles.active: native
+
+server:
+  port: ${SERVICE_PORT:9000}
+
+---
+spring:
+  profiles: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: config-repo
+        bootstrap: true
+    stream:
+      bindings:
+        springCloudBusOutput:
+          destination: springCloudBusInput
+          contentType: application/json
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${REGISTRY_URL:http://localhost:9001/eureka/}
