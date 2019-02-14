@@ -13,7 +13,7 @@ spring:
     config:
       server:
         native:
-          search-locations: config-repo
+          search-locations: "classpath:config-repo"
         bootstrap: true
     stream:
       bindings:
