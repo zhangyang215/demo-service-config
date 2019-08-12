@@ -1,7 +1,7 @@
 spring:
   application:
     name: service-config
-  profiles.active: native
+  profiles.active: dev
 
 server:
   port: ${SERVICE_PORT:9000}
@@ -28,7 +28,7 @@ eureka:
 
 ---
 spring:
-  profiles: docker
+  profiles: dev
   cloud:
     config:
       server:
