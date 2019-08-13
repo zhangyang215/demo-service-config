@@ -6,6 +6,8 @@ spring:
   zipkin:
     sender:
       type: rabbit
+    rabbitmq:
+      queue: zipkin
   sleuth:
     sampler:
       probability: 1.0 # 采样比例100%
