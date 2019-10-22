@@ -1,7 +1,7 @@
 spring:
   application:
     name: service-config
-  profiles.active: dev
+  profiles.active: native
 
 server:
   port: ${SERVICE_PORT:9000}
