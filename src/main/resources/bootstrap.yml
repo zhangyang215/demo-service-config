@@ -1,7 +1,7 @@
 spring:
   application:
     name: service-config
-  profiles.active: docker
+  profiles.active: native
 ---
 server:
   port: 9000
@@ -40,7 +40,3 @@ spring:
         springCloudBusOutput:
           destination: springCloudBusInput
           contentType: application/json
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${REGISTRY_URL}
