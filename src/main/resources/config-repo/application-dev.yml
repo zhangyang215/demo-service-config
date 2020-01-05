@@ -2,28 +2,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:9001/eureka/
-spring:
-  zipkin:
-    sender:
-      type: rabbit
-    rabbitmq:
-      queue: zipkin
-  sleuth:
-    web:
-      client:
-        enabled: true
-    sampler:
-      probability: 1.0 # 采样比例100%
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://172.19.1.110:3306/zipkin?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: root
-    password: fangang12321
-    initialize: true
-    continueOnError: true
-  rabbitmq:
-    host: 172.19.1.111
-    port: 5672
-    username: guest
-    password: guest

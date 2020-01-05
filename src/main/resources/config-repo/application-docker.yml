@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.0.209:9001/eureka/
+      defaultZone: http://192.168.0.209:31001/eureka/
 spring:
   zipkin:
     sender:
@@ -17,13 +17,13 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://172.19.1.110:3306/zipkin?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://192.168.0.38:3306/demo?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
-    password: fangang12321
+    password: 1234
     initialize: true
     continueOnError: true
   rabbitmq:
-    host: 172.19.1.111
+    host: 192.168.0.22
     port: 5672
     username: guest
     password: guest
