@@ -22,6 +22,17 @@ spring:
     password: 1234
     initialize: true
     continueOnError: true
+  redis:
+    database: 0
+    host: 139.9.35.139
+    port: 6379
+    password: 
+    pool:
+      maxActive: 200
+      maxWait: -1
+      maxIdel: 10
+      minIdel: 0
+    timeout: 1000
   rabbitmq:
     host: 192.168.0.22
     port: 5672
