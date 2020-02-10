@@ -41,5 +41,5 @@ spring:
 management:
   endpoints:
     web:
-      exposure:
-        include: *
+      exposure: 
+        include: 'hystrix.stream'
