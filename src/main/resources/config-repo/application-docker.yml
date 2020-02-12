@@ -1,8 +1,8 @@
 eureka:
   client:
     service-url:
-      # defaultZone: http://192.168.0.209:9001/eureka/,http://192.168.0.22:9001/eureka/,http://192.168.0.38:9001/eureka/
-      defaultZone: http://192.168.0.209:31001/eureka/
+      defaultZone: http://node2:9001/eureka/,http://node3:9001/eureka/,http://node4:9001/eureka/
+      # defaultZone: http://192.168.0.209:31001/eureka/
 spring:
   zipkin:
     sender:
