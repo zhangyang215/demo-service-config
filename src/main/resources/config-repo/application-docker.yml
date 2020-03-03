@@ -35,7 +35,7 @@ spring:
       minIdel: 0
     timeout: 1000
   rabbitmq:
-    host: rabbitmq-0.rebbitmq
+    host: 47.105.178.19
     port: 5672
     username: guest
     password: guest
