@@ -12,4 +12,4 @@ management:
   security:
     enabled: false
 app:
-  owner: fangang
+  owner: mooodo
