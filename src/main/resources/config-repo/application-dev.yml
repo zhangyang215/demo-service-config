@@ -2,5 +2,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:9001/eureka/
+spring:
+  rabbitmq:
+    host: 172.31.87.110
+    port: 5672
+    username: guest
+    password: guest
 app:
   owner: fangang
