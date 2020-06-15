@@ -3,4 +3,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:9001/eureka/
 app:
-  owner: mooodo
+  owner: fangang
