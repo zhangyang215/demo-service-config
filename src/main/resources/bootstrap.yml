@@ -1,7 +1,7 @@
 spring:
   application:
     name: service-config
-  profiles.active: native
+  profiles.active: dev
 ---
 server:
   port: 9000
@@ -22,6 +22,24 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9001/eureka/
+---
+server:
+  port: ${SERVICE_PORT:9000}
+spring:
+  profiles: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mooodo/demo-service-config.git
+          searchPaths: src/main/resources/config-repo
+          force-pull: true
+        bootstrap: true
+    stream:
+      bindings:
+        springCloudBusOutput:
+          destination: springCloudBusInput
+          contentType: application/json
 ---
 server:
   port: ${SERVICE_PORT:9000}
