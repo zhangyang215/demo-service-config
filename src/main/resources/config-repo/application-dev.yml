@@ -8,6 +8,10 @@ spring:
     port: 5672
     username: guest
     password: guest
+  config:
+    bus:
+      trace:
+        enabled: true
 management:
   endpoints:
     web:
