@@ -16,6 +16,6 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, bus-refresh
+        include: health, info, env, bus-refresh
 app:
   owner: fangang
