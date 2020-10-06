@@ -1,3 +1,22 @@
 eureka:
   client:
     registry-fetch-interval-seconds: 5 #default 30s
+zuul:
+  ribbonIsolationStrategy: THREAD # default: SEMAPHORE
+  routes:
+    customer:
+      path: /customer/**
+      serviceId: service-customer
+      stripPrefix: true
+    product:
+      path: /product/**
+      serviceId: service-product
+      stripPrefix: true
+    supplier:
+      path: /supplier/**
+      serviceId: service-supplier
+      stripPrefix: true
+ribbon:
+  MaxAutoRetries: 1 # default 0
+  MaxAutoRetriesNextServer: 2 # default 1
+  OkToRetryOnAllOperations: true # default false
