@@ -20,7 +20,7 @@ spec:
       - name: demo-service-config 
         image: 172.31.87.111:5000/demo-service-config
         imagePullPolicy: Always
-        # args: ["--spring.profiles.active=native"]
+        args: ["--spring.profiles.active=jdbc"]
 
 ---
 kind: Service
