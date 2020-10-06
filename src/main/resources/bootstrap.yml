@@ -87,3 +87,7 @@ spring:
 server:
   port: ${SERVICE_PORT:9000}
 spring.cloud.config.server.jdbc.sql: SELECT key1, value1 from config_properties where APPLICATION=? and PROFILE=? and LABEL=?
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-0.eureka:9001/eureka/,http://eureka-1.eureka:9001/eureka/,http://eureka-2.eureka:9001/eureka/
