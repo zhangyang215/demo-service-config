@@ -2,6 +2,11 @@ spring:
   application:
     name: service-config
   profiles.active: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, env, bus-refresh
 ---
 server:
   port: 9000
