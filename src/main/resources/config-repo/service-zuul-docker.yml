@@ -16,6 +16,10 @@ zuul:
       path: /supplier/**
       serviceId: service-supplier
       stripPrefix: true
+    order:
+      path: /order/**
+      serviceId: service-order
+      stripPrefix: true
 ribbon:
   MaxAutoRetries: 1 # default 0
   MaxAutoRetriesNextServer: 2 # default 1
