@@ -75,8 +75,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://mysql-0.mysql:3306/config?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: root
-    password: 1234
+    username: config
+    password: config1234
     initialize: true
     continueOnError: true
   cloud:

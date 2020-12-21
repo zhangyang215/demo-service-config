@@ -21,6 +21,6 @@ zuul:
       serviceId: service-order
       stripPrefix: true
 ribbon:
-  MaxAutoRetries: 1 # default 0
+  MaxAutoRetries: 0 # default 0
   MaxAutoRetriesNextServer: 2 # default 1
   OkToRetryOnAllOperations: true # default false

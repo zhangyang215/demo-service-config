@@ -24,7 +24,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://mysql-0.mysql:3306/demo?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: root
+    username: demo
     password: 1234
     initialize: true
     continueOnError: true
@@ -54,8 +54,8 @@ spring:
 ribbon:
   connectTimeout: 2000 # 请求连接的超时时间
   readTimeout: 5000 # 请求处理的超时时间
-  maxAutoRetries: 1 # 对当前实例的重试次数
-  maxAutoRetriesNextServer: 3# 切换实例的重试次数
+  maxAutoRetries: 0 # 对当前实例的重试次数
+  maxAutoRetriesNextServer: 2# 切换实例的重试次数
   okToRetryOnAllOperations: true# 对所有操作请求都进行重试
 management:
   endpoints:
