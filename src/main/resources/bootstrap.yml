@@ -1,21 +1,17 @@
 spring:
   application:
     name: service-config
-  profiles.active: dev
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health, info, env, bus-refresh
+  profiles.active: composite
 ---
 server:
   port: 9000
 spring:
-  profiles: native
+  profiles: composite
   cloud:
     config:
       server:
-        native:
+        composite:
+        - type: native
           search-locations: "classpath:config-repo"
         bootstrap: true
     stream:
@@ -23,6 +19,10 @@ spring:
         springCloudBusOutput:
           destination: springCloudBusInput
           contentType: application/json
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
 eureka:
   client:
     serviceUrl:
@@ -45,6 +45,10 @@ spring:
         springCloudBusOutput:
           destination: springCloudBusInput
           contentType: application/json
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
 ---
 server:
   port: ${SERVICE_PORT:9000}
@@ -63,6 +67,10 @@ spring:
         springCloudBusOutput:
           destination: springCloudBusInput
           contentType: application/json
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
 ---
 spring:
   profiles: jdbc
